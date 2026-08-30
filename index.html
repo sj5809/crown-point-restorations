@@ -155,10 +155,9 @@
   .card p{font-size:.95rem}
   .card-photo{height:190px;background-size:cover;background-position:center}
 
-  /* Feature card fills the remaining row width so nothing looks orphaned */
-  .card-feature{grid-column:span 2}
+  /* Feature card fills the row on multi-column layouts; a normal stacked card on phones */
   @media(min-width:601px){
-    .card-feature{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+    .card-feature{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
     .card-feature .card-photo{height:100%;min-height:220px}
   }
 
